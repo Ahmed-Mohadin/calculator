@@ -1,0 +1,134 @@
+/* core */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Permanent Marker', cursive;  
+    min-height: 100%;
+    position: relative;
+}
+body{
+    background-color: #FCA311;
+    color: #000;
+    margin-bottom: 100px;
+}
+
+/* headder */
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+}
+header .title{
+    font-size: 3em;
+}
+
+/* .calculator */
+.calculator{
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: 2rem;
+    width: 21rem;
+    border-radius: 2rem;
+    background-color: #33202A;
+}
+.calculator .buttons{
+    display: grid;
+    grid-template: repeat(5, 3.7rem) / repeat(4, 4rem);
+    grid-gap: 0.5rem;
+}
+.calculator [data-current]{
+    width: 100%;
+    height: 45px;
+    text-align: right;
+    padding: 0 0.5rem;
+    font-size: 1.9em;
+    margin-bottom: 1rem;
+    outline: none;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border: solid 0.5rem transparent;
+    background-color: #35393C;
+    color: #D7CDCC;
+}
+.calculator [data-previous]{
+    width: 100%;
+    height: 40px;
+    text-align: right;
+    padding: 0 0.5rem;
+    font-size: 1.2em;
+    outline: none;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border: solid 0.5rem transparent;
+    background-color: #35393C;
+    color: #648767;
+}
+.calculator [data-number], .calculator [data-operator], 
+.calculator [data-decimal], .calculator [data-all-clear], .calculator [data-clear]{
+    width: 90%;
+    border-radius: 50%;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    background-color: #9999A1;
+    color: #2C514C;
+}
+.calculator [data-equals]{
+    grid-column: span 2;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 100px;
+    background-color: #66666E;
+    color: #73EEDC;
+}
+.calculator button{
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+.calculator button:hover{
+    transform: translate(-0.2rem, -0.2rem);
+}
+.calculator [data-all-clear]:hover, .calculator [data-clear]:hover{
+    background-color: #D72638;
+    color: #FFF;
+}
+.calculator [data-operator]:hover, .calculator [data-equals]:hover{
+    background-color: #53FF45;
+    color: #000;
+}
+.calculator [data-number]:hover, .calculator [data-decimal]:hover{
+    background-color: #4C3B4D;
+    color: #FFF;
+}
+
+/* footer */
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: #000;
+    border: solid 0.3rem transparent;
+}
+footer a:hover{
+    color: #FFF;
+    border-bottom-color: #FFF;
+}
