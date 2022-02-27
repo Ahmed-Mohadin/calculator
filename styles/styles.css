@@ -1,12 +1,10 @@
 /* core */
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
 html{
     font-family: 'Permanent Marker', cursive;  
     min-height: 100%;
@@ -29,23 +27,29 @@ header .title{
     font-size: 3em;
 }
 
+/* main */
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* .calculator */
 .calculator{
-    margin: 0 auto;
     margin-top: 1rem;
     padding: 2rem;
-    width: 21rem;
+    width: 19.5rem;
     border-radius: 2rem;
     background-color: #33202A;
 }
 .calculator .buttons{
     display: grid;
-    grid-template: repeat(5, 3.7rem) / repeat(4, 4rem);
-    grid-gap: 0.5rem;
+    grid-template: repeat(5, 3.7rem) / repeat(4, 3.65rem);
+    grid-gap: 0.4rem;
 }
 .calculator [data-current]{
     width: 100%;
-    height: 45px;
+    height: 3rem;
     text-align: right;
     padding: 0 0.5rem;
     font-size: 1.9em;
@@ -59,7 +63,7 @@ header .title{
 }
 .calculator [data-previous]{
     width: 100%;
-    height: 40px;
+    height: 2.7rem;
     text-align: right;
     padding: 0 0.5rem;
     font-size: 1.2em;
@@ -72,9 +76,8 @@ header .title{
 }
 .calculator [data-number], .calculator [data-operator], 
 .calculator [data-decimal], .calculator [data-all-clear], .calculator [data-clear]{
-    width: 90%;
     border-radius: 50%;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: bold;
     border: none;
     cursor: pointer;
